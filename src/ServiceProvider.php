@@ -10,7 +10,7 @@ namespace MonkiiBuilt\LadSettings;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 
-class Provider extends BaseServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
 
     protected $defer = false;
@@ -19,7 +19,7 @@ class Provider extends BaseServiceProvider
     {
         $packageRegistry->registerPackage('MonkiiBuilt\LadSettings');
 
-        $this->loadMigrationsFrom(__DIR__.'/../resources/database/migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../resources/database');
 
         $this->loadRoutesFrom(__DIR__.'/routes.php');
 

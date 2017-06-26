@@ -14,7 +14,7 @@ Route::group(['prefix' => 'admin', 'namespace' => 'MonkiiBuilt\LadSettings', 'mi
 
     Route::post('settings', ['as' => 'lad-settings.store', 'uses' => 'Controllers\AdminController@store']);
 
-    Route::put('settings', ['as' => 'lad-settings.update', 'uses' => 'Controllers\AdminController@update']);
+    Route::put('settings/{id}', ['as' => 'lad-settings.update', 'uses' => 'Controllers\AdminController@update']);
 
-    Route::delete('settings', ['as' => 'lad-settings.destroy', 'uses' => 'Controllers\AdminController@destroy']);
+    Route::delete('settings/{id}', ['as' => 'lad-settings.destroy', 'uses' => 'Controllers\AdminController@destroy']);
 });
